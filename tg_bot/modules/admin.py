@@ -301,7 +301,7 @@ __همه ی موارد مربوط به مدیریت گپ مثل ترفیع کا�
 __mod_name__ = "ادمین"
 
 PIN_HANDLER = CommandHandler(["پین", "📌"], pin, pass_args=True, filters=Filters.group)
-PIN_REGEX_HANDLER = DisableAbleRegexHandler("(?i)پین", pin, friendly="پین")
+PIN_HANDLER = DisableAbleRegexHandler("(?i)پین", pin, friendly="پین")
 UNPIN_HANDLER = CommandHandler(["لغوپین", "🖇"], unpin, filters=Filters.group)
 LINK_HANDLER = DisableAbleCommandHandler(["لینک", "📮"], link_public)
 SET_LINK_HANDLER = CommandHandler(["ستلینک", "🔗"], set_link, filters=Filters.group)
