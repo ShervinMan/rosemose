@@ -56,6 +56,8 @@ def report(bot: Bot, update: Update) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
 
+    message.reply_text("دقت کن،فکر نکنم ایشون ممبر باشه")
+
     if chat and message.reply_to_message and sql.chat_should_report(chat.id):
         reported_user = message.reply_to_message.from_user  # type: Optional[User]
         chat_name = chat.title or chat.first or chat.username
